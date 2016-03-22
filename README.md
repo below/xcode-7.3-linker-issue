@@ -13,3 +13,10 @@ duplicate symbol _OBJC_CLASS_$__SwiftNativeNSError in:
 Linking works fine if `-ObjC` is not being passed.
 
 See also <http://www.openradar.me/25289652>
+
+----
+
+@below here
+
+My first step was to check if the -objc flag is still needed, and apparently it is not. The flag was used to load all symbols from ObjC static libs, and Xcode 7.3 seems to be using lObjCLib for that. What is your application of the -objc flag?
+
